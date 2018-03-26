@@ -1,0 +1,107 @@
+
+(library
+	
+	(id <identifier>)
+	; * the `<identifier>` should be an s-expression, perhaps similar to what one expects to put in R7RS `import`;
+	
+	(description <string> ...)
+	; * one or more strings that will be concatenated to obtain the final description;
+	; * each string is considered a different "paragraph";
+	; * it is optional;
+	
+	(link <URL> ...)
+	; * each URL points to a useful external resource;  the URL is a string;
+	; * we can extend this as instead of `<URL>` one can put an expression such as `(<tag> <URL>)` where
+	;   `<tag>` could be something like `specification`, `rationale`, `example`, etc.
+	; * we use the singular `link` instead of `links` because most of the time there is a single link;
+	; * `links` could be used as an alias;
+	; * it is optional;
+	
+	
+	(definitions
+		
+		(<identifier>
+			; * `<identifier>` can also be of the form `(* <identifier> ...)` to specify in the same clause multiple related definitions that share the same properties;
+			
+			(type <type>)
+			; * `<type>` can be one of `procedure`, `syntax`, `value` (i.e. a constant), `opaque` (i.e. not specified);
+			; * `<type>` could also be `predicate`, `constructor` or `comparator=` (or `comparator<` or `comparator<=`) which are `procedure` but adds extra meaning;
+			; * `<type>` could also be `procedure!` to indicate that it has side-effects;
+			; * something else that is "standard"?
+			; * it is mandatory;
+			
+			(category <category> ...)
+			; * `<category>` is a symbol specified in the `categories` section;
+			; * it is optional;
+			
+			(contract
+				; * perhaps we could model this section after Racket's contracts;
+				; * it is optional;
+				((<input> ...) -> <output>))
+				; * returns one value
+				((<input> ...) -> (<output> ...))
+				; * returns `values`
+				; * `<input>` and `<output>` should be symbol specified in the `types` section;
+				; * `<input>` and `<output>` could instead be an expresion like `(<meaning> <type>)`, where
+				;   `<meaning>` is just a word giving a better description of its purpose;
+			)
+			
+			(alias <identifier> ...)
+			; * this is exported also under these identifiers for convenience or compatibility;
+			
+			(extends (<symbol> <library> ...) ...)
+			; * this allows one to specify that a particular definition extends (and thus is backward compatible) with another definition;
+			
+			(compatible (<symbol> <library> ...) ...)
+			; * this allows one to specify that a particular definition is compatible with another;
+			; * this is weaker than `extends` in the sense that it might be an re-export of the same object, or perhaps an re-implementation;
+			
+			(description <string> ...)
+			(link <URL> ...)
+		)
+		
+		...
+	)
+	
+	
+	(borrows
+		; * these identifiers will help us classify definitions into multiple categories;
+		
+		(<identifier>
+			(from (<symbol> <library> ...) ...)
+			; * one can use `*` as `<symbol>` to mean that the same `<identifier>` should be used
+			(type <type>)
+			(category <category> ...)
+			(description <string> ...)
+			(link <URL> ...
+		)
+		
+		...
+	)
+	
+	
+	(categories
+		; * these identifiers will help us classify definitions into multiple categories;
+		; * this section and any attributes are optional;
+		
+		(<identifier>
+			(description <string> ...)
+			(link <URL> ...))
+		
+		...
+	)
+	
+	
+	(types
+		; * these allows us to easily find definitions that pertain to certain types;
+		; * this section and any attributes are optional;
+		; * there should perhaps exist a list of "well-known" types that don't need to be described herein;
+		
+		(<identifier>
+			(description <string> ...)
+			(link <URL> ...))
+		
+		...
+	)
+)
+
