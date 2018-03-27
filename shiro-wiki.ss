@@ -1,0 +1,1768 @@
+((identifier (srfi 0))
+ (title "SRFI-0: Feature-based conditional expansion construct")
+ (symbols cond-expand))
+
+((identifier (srfi 1))
+ (title "SRFI-1: List Library")
+ (symbols
+  alist-cons
+  alist-copy
+  alist-delete
+  alist-delete!
+  any
+  append
+  append!
+  append-map
+  append-map!
+  append-reverse
+  append-reverse!
+  assoc
+  assq
+  assv
+  break
+  break!
+  car
+  car+cdr
+  cdr
+  circular-list
+  circular-list?
+  concatenate
+  concatenate!
+  cons
+  cons*
+  count
+  delete
+  delete!
+  delete-duplicates
+  delete-duplicates!
+  dotted-list?
+  drop
+  drop-right
+  drop-right!
+  drop-while
+  eighth
+  every
+  fifth
+  filter
+  filter!
+  filter-map
+  find
+  find-tail
+  first
+  fold
+  fold-right
+  for-each
+  fourth
+  iota
+  last
+  last-pair
+  length
+  length+
+  list
+  list-copy
+  list-index
+  list-ref
+  list-tabulate
+  list=
+  lset-adjoin
+  lset-diff+intersection
+  lset-diff+intersection!
+  lset-difference
+  lset-difference!
+  lset-intersection
+  lset-intersection!
+  lset-union
+  lset-union!
+  lset-xor
+  lset-xor!
+  lset<=
+  lset=
+  make-list
+  map
+  map!
+  map-in-order
+  member
+  memq
+  memv
+  ninth
+  not-pair?
+  null-list?
+  null?
+  pair-fold
+  pair-fold-right
+  pair-for-each
+  pair?
+  partition
+  partition!
+  proper-list?
+  reduce
+  reduce-right
+  remove
+  remove!
+  reverse
+  reverse!
+  second
+  set-car!
+  set-cdr!
+  seventh
+  sixth
+  span
+  span!
+  split-at
+  split-at!
+  take
+  take!
+  take-right
+  take-while
+  take-while!
+  tenth
+  third
+  unfold
+  unfold-right
+  unzip1
+  unzip2
+  unzip3
+  unzip4
+  unzip5
+  xcons
+  zip))
+
+((identifier (srfi 2))
+ (title "SRFI-2: AND-LET*: an AND with local bindings, a guarded LET* special")
+ (symbols and-let*))
+
+((identifier (srfi 4))
+ (title "SRFI-4: Homogeneous numeric vector datatypes")
+ (symbols))
+
+((identifier (srfi 5))
+ (title "SRFI-5: A compatible let form with signatures and rest arguments")
+ (symbols let))
+
+((identifier (srfi 6))
+ (title "SRFI-6 : Basic String Ports")
+ (symbols get-output-string open-input-string open-output-string))
+
+((identifier (srfi 7))
+ (title "SRFI-7: Feature-based program configuration language")
+ (symbols code feature-cond files program requires))
+
+((identifier (srfi 8))
+ (title "SRFI 8: receive: Binding to multiple values")
+ (symbols receive))
+
+((identifier (srfi 9))
+ (title "SRFI-9: Defining Record Types")
+ (symbols define-record-type))
+
+((identifier (srfi 10))
+ (title "SRFI-10: Sharp-Comma External Form")
+ (symbols define-reader-ctor))
+
+((identifier (srfi 11))
+ (title "SRFI-11: Syntax for receiving multiple values")
+ (symbols let*-values let-values))
+
+((identifier (srfi 13))
+ (title "SRFI-13: String Libraries")
+ (symbols
+  check-substring-spec
+  kmp-step
+  let-string-start+end
+  list->string
+  make-kmp-restart-vector
+  make-string
+  reverse-list->string
+  string
+  string->list
+  string-any
+  string-append
+  string-append/shared
+  string-ci<
+  string-ci<=
+  string-ci<>
+  string-ci=
+  string-ci>
+  string-ci>=
+  string-compare
+  string-compare-ci
+  string-concatenate
+  string-concatenate-reverse
+  string-concatenate-reverse/shared
+  string-concatenate/shared
+  string-contains
+  string-contains-ci
+  string-copy
+  string-copy!
+  string-count
+  string-delete
+  string-downcase
+  string-downcase!
+  string-drop
+  string-drop-right
+  string-every
+  string-fill!
+  string-filter
+  string-fold
+  string-fold-right
+  string-for-each
+  string-for-each-index
+  string-hash
+  string-hash-ci
+  string-index
+  string-index-right
+  string-join
+  string-kmp-partial-search
+  string-length
+  string-map
+  string-map!
+  string-null?
+  string-pad
+  string-pad-right
+  string-parse-final-start+end
+  string-parse-start+end
+  string-prefix-ci?
+  string-prefix-length
+  string-prefix-length-ci
+  string-prefix?
+  string-ref
+  string-replace
+  string-reverse
+  string-reverse!
+  string-set!
+  string-skip
+  string-skip-right
+  string-suffix-ci?
+  string-suffix-length
+  string-suffix-length-ci
+  string-suffix?
+  string-tabulate
+  string-take
+  string-take-right
+  string-titlecase
+  string-titlecase!
+  string-tokenize
+  string-trim
+  string-trim-both
+  string-trim-right
+  string-unfold
+  string-unfold-right
+  string-upcase
+  string-upcase!
+  string-xcopy!
+  string<
+  string<=
+  string<>
+  string=
+  string>
+  string>=
+  string?
+  substring-spec-ok?
+  substring/shared
+  xsubstring))
+
+((identifier (srfi 14))
+ (title "SRFI-14: Character-set Library")
+ (symbols
+  ->char-set
+  char-set
+  char-set->list
+  char-set->string
+  char-set-adjoin
+  char-set-adjoin!
+  char-set-any
+  char-set-complement
+  char-set-complement!
+  char-set-contains?
+  char-set-copy
+  char-set-count
+  char-set-cursor
+  char-set-cursor-next
+  char-set-delete
+  char-set-delete!
+  char-set-diff+intersection
+  char-set-diff+intersection!
+  char-set-difference
+  char-set-difference!
+  char-set-every
+  char-set-filter
+  char-set-filter!
+  char-set-fold
+  char-set-for-each
+  char-set-hash
+  char-set-intersection
+  char-set-intersection!
+  char-set-map
+  char-set-ref
+  char-set-size
+  char-set-unfold
+  char-set-unfold!
+  char-set-union
+  char-set-union!
+  char-set-xor
+  char-set-xor!
+  char-set:ascii
+  char-set:blank
+  char-set:digit
+  char-set:empty
+  char-set:full
+  char-set:graphic
+  char-set:hex-digit
+  char-set:iso-control
+  char-set:letter
+  char-set:letter+digit
+  char-set:lower-case
+  char-set:printing
+  char-set:punctuation
+  char-set:symbol
+  char-set:title-case
+  char-set:upper-case
+  char-set:whitespace
+  char-set<=
+  char-set=
+  char-set?
+  end-of-char-set?
+  list->char-set
+  list->char-set!
+  string->char-set
+  string->char-set!
+  ucs-range->char-set
+  ucs-range->char-set!))
+
+((identifier (srfi 16))
+ (title "SRFI-16: Syntax for procedures of variable arity.")
+ (symbols case-lambda))
+
+((identifier (srfi 17))
+ (title "SRFI-17: Generalized set!")
+ (symbols getter-with-setter set! setter))
+
+((identifier (srfi 18))
+ (title "SRFI-18: Multithreading support")
+ (symbols
+  abandoned-mutex-exception?
+  condition-variable-broadcast!
+  condition-variable-name
+  condition-variable-signal!
+  condition-variable-specific
+  condition-variable-specific-set!
+  condition-variable?
+  current-exception-handler
+  current-thread
+  current-time
+  join-timeout-exception?
+  make-condition-variable
+  make-mutex
+  make-thread
+  mutex-lock!
+  mutex-name
+  mutex-specific
+  mutex-specific-set!
+  mutex-state
+  mutex-unlock!
+  mutex?
+  raise
+  seconds->time
+  terminated-thread-exception?
+  thread-join!
+  thread-name
+  thread-sleep!
+  thread-specific
+  thread-specific-set!
+  thread-start!
+  thread-terminate!
+  thread-yield!
+  thread?
+  time->seconds
+  time?
+  uncaught-exception-reason
+  uncaught-exception?
+  with-exception-handler))
+
+((identifier (srfi 19))
+ (title "SRFI-19: Time Data Types and Procedures")
+ (symbols
+  add-duration
+  add-duration!
+  copy-time
+  current-date
+  current-julian-day
+  current-modified-julian-day
+  current-time
+  date->julian-day
+  date->modified-julian-day
+  date->string
+  date->time-monotonic
+  date->time-tai
+  date->time-utc
+  date-day
+  date-hour
+  date-minute
+  date-month
+  date-nanosecond
+  date-second
+  date-week-day
+  date-week-number
+  date-year
+  date-year-day
+  date-zone-offset
+  date?
+  julian-day->date
+  julian-day->time-monotonic
+  julian-day->time-tai
+  julian-day->time-utc
+  make-date
+  make-time
+  modified-julian-day->date
+  modified-julian-day->time-monotonic
+  modified-julian-day->time-tai
+  modified-julian-day->time-utc
+  set-time-nanosecond!
+  set-time-second!
+  set-time-type!
+  string->date
+  subtract-duration
+  subtract-duration!
+  time-difference
+  time-difference!
+  time-duration
+  time-monotonic
+  time-monotonic->date
+  time-monotonic->julian-day
+  time-monotonic->modified-julian-day
+  time-monotonic->time-tai
+  time-monotonic->time-tai!
+  time-monotonic->time-utc
+  time-monotonic->time-utc!
+  time-nanosecond
+  time-process
+  time-resolution
+  time-second
+  time-tai
+  time-tai->date
+  time-tai->julian-day
+  time-tai->modified-julian-day
+  time-tai->time-monotonic
+  time-tai->time-monotonic!
+  time-tai->time-utc
+  time-tai->time-utc!
+  time-thread
+  time-type
+  time-utc
+  time-utc->date
+  time-utc->julian-day
+  time-utc->modified-julian-day
+  time-utc->time-monotonic
+  time-utc->time-monotonic!
+  time-utc->time-tai
+  time-utc->time-tai!
+  time<=?
+  time<?
+  time=?
+  time>=?
+  time>?
+  time?))
+
+((identifier (srfi 21))
+ (title "SRFI-21: Real-time Multithreading support")
+ (symbols
+  abandoned-mutex-exception?
+  condition-variable-broadcast!
+  condition-variable-name
+  condition-variable-signal!
+  condition-variable-specific
+  condition-variable-specific-set!
+  condition-variable?
+  current-exception-handler
+  current-thread
+  current-time
+  join-timeout-exception?
+  make-condition-variable
+  make-mutex
+  make-thread
+  mutex-lock!
+  mutex-name
+  mutex-specific
+  mutex-specific-set!
+  mutex-state
+  mutex-unlock!
+  mutex?
+  raise
+  seconds->time
+  terminated-thread-exception?
+  thread-base-priority
+  thread-base-priority-set!
+  thread-join!
+  thread-name
+  thread-priority-boost
+  thread-priority-boost-set!
+  thread-quantum
+  thread-quantum-set!
+  thread-sleep!
+  thread-specific
+  thread-specific-set!
+  thread-start!
+  thread-terminate!
+  thread-yield!
+  thread?
+  time->seconds
+  time?
+  uncaught-exception-reason
+  uncaught-exception?
+  with-exception-handler))
+
+((identifier (srfi 22))
+ (title "SRFI-22 : Running Scheme Scripts on Unix")
+ (symbols main))
+
+((identifier (srfi 23))
+ (title "SRFI-23: Error reporting mechanism")
+ (symbols error))
+
+((identifier (srfi 25))
+ (title "SRFI-25: Multi-dimensional Array Primitives")
+ (symbols
+  SRFI-47
+  array
+  array-end
+  array-rank
+  array-ref
+  array-set!
+  array-start
+  array?
+  make-array
+  shape
+  share-array))
+
+((identifier (srfi 26))
+ (title "SRFI-26: Notation for Specializing Parameters without Currying")
+ (symbols cut cute))
+
+((identifier (srfi 27))
+ (title "SRFI-27: Sources of Random Bits")
+ (symbols
+  default-random-source
+  make-random-source
+  random-integer
+  random-real
+  random-source-make-integers
+  random-source-make-reals
+  random-source-pseudo-randomize!
+  random-source-randomize!
+  random-source-state-ref
+  random-source-state-set!
+  random-source?))
+
+((identifier (srfi 28))
+ (title "SRFI-28: Basic format string")
+ (symbols format))
+
+((identifier (srfi 29))
+ (title "SRFI-29: Localization")
+ (symbols
+  SRFI-29
+  current-country
+  current-language
+  current-locale-details
+  declare-bundle!
+  format
+  gettext
+  load-bundle!
+  localized-template
+  store-bundle))
+
+((identifier (srfi 30))
+ (title "SRFI-30 : Nested Multi-line Comments")
+ (symbols))
+
+((identifier (srfi 31))
+ (title "SRFI-31: A special form rec for recursive evaluation")
+ (symbols rec))
+
+((identifier (srfi 34))
+ (title "SRFI-34: Exception Handling for Programs")
+ (symbols guard raise with-exception-handler))
+
+((identifier (srfi 35))
+ (title "SRFI-35: Conditions")
+ (symbols
+  &condition
+  &error
+  &message
+  &serious
+  Guile
+  STklos
+  condition
+  condition-has-type?
+  condition-message
+  condition-ref
+  condition-type?
+  condition?
+  define-condition-type
+  error?
+  extract-condition
+  make-compound-condition
+  make-condition
+  make-condition-type
+  make-struct-type
+  message-condition?
+  serious-condition?))
+
+((identifier (srfi 36))
+ (title "SRFI-36: I/O Conditions")
+ (symbols
+  &i/o-closed-error
+  &i/o-error
+  &i/o-file-already-exists-error
+  &i/o-file-is-read-only-error
+  &i/o-file-protection-error
+  &i/o-filename-error
+  &i/o-malformed-filename-error
+  &i/o-no-such-file-error
+  &i/o-port-error
+  &i/o-read-error
+  &i/o-write-error
+  &read-error
+  i/o-closed-error?
+  i/o-error-filename
+  i/o-error-port
+  i/o-error?
+  i/o-file-already-exists-error?
+  i/o-file-is-read-only-error?
+  i/o-file-protection-error?
+  i/o-filename-error?
+  i/o-malformed-filename-error?
+  i/o-no-such-file-error?
+  i/o-port-error?
+  i/o-read-error?
+  i/o-write-error?
+  read-error-column
+  read-error-line
+  read-error-position
+  read-error-span
+  read-error?))
+
+((identifier (srfi 37))
+ (title "SRFI-37: args-fold: a program argument processor")
+ (symbols
+  args-fold
+  option
+  option-names
+  option-optional-arg?
+  option-processor
+  option-required-arg?))
+
+((identifier (srfi 38))
+ (title "SRFI-38: External Representation for Data With Shared Structure")
+ (symbols
+  read-with-shared-structure
+  read/ss
+  write-with-shared-structure
+  write/ss))
+
+((identifier (srfi 39))
+ (title "SRFI-39: Parameter objects")
+ (symbols make-parameter parameterize))
+
+((identifier (srfi 40))
+ (title "SRFI-40 : A Library of Streams")
+ (symbols
+  stream
+  stream-car
+  stream-cdr
+  stream-cons
+  stream-delay
+  stream-filter
+  stream-for-each
+  stream-map
+  stream-null
+  stream-null?
+  stream-pair?
+  stream-unfoldn
+  stream?))
+
+((identifier (srfi 41))
+ (title "SRFI-41: Streams")
+ (symbols
+  define-stream
+  list->stream
+  port->stream
+  stream
+  stream->list
+  stream-append
+  stream-car
+  stream-cdr
+  stream-concat
+  stream-cons
+  stream-constant
+  stream-drop
+  stream-drop-while
+  stream-filter
+  stream-fold
+  stream-for-each
+  stream-from
+  stream-iterate
+  stream-lambda
+  stream-length
+  stream-let
+  stream-map
+  stream-match
+  stream-null
+  stream-null?
+  stream-of
+  stream-pair?
+  stream-range
+  stream-ref
+  stream-reverse
+  stream-scan
+  stream-take
+  stream-take-while
+  stream-unfold
+  stream-unfolds
+  stream-zip
+  stream?))
+
+((identifier (srfi 42))
+ (title "SRFI-42: Eager Comprehensions")
+ (symbols
+  :
+  :char-range
+  :dispatched
+  :do
+  :integers
+  :let
+  :list
+  :parallel
+  :port
+  :range
+  :real-range
+  :string
+  :until
+  :vector
+  :while
+  any?-ec
+  append-ec
+  do-ec
+  every?-ec
+  first-ec
+  fold-ec
+  fold3-ec
+  last-ec
+  list-ec
+  max-ec
+  min-ec
+  product-ec
+  string-append-ec
+  string-ec
+  sum-ec
+  vector-ec
+  vector-of-length-ec))
+
+((identifier (srfi 43))
+ (title "SRFI-43: Vector library")
+ (symbols
+  list->vector
+  make-vector
+  reverse-list->vector
+  reverse-vector->list
+  vector
+  vector->list
+  vector-any
+  vector-append
+  vector-binary-search
+  vector-concatenate
+  vector-copy
+  vector-copy!
+  vector-count
+  vector-empty?
+  vector-every
+  vector-fill!
+  vector-fold
+  vector-fold-right
+  vector-for-each
+  vector-index
+  vector-index-right
+  vector-length
+  vector-map
+  vector-map!
+  vector-ref
+  vector-reverse!
+  vector-reverse-copy
+  vector-reverse-copy!
+  vector-set!
+  vector-skip
+  vector-skip-right
+  vector-swap!
+  vector-unfold
+  vector-unfold-right
+  vector=
+  vector?))
+
+((identifier (srfi 44))
+ (title "SRFI-44: Collections")
+ (symbols
+  alist-map
+  alist-map->list
+  alist-map-add-from
+  alist-map-add-from!
+  alist-map-clear
+  alist-map-clear!
+  alist-map-contains-key?
+  alist-map-copy
+  alist-map-count
+  alist-map-delete
+  alist-map-delete!
+  alist-map-delete-all
+  alist-map-delete-all!
+  alist-map-delete-all-from
+  alist-map-delete-all-from!
+  alist-map-delete-from
+  alist-map-delete-from!
+  alist-map-equivalence-function
+  alist-map-fold-keys-left
+  alist-map-fold-keys-right
+  alist-map-fold-left
+  alist-map-fold-right
+  alist-map-get
+  alist-map-get-all
+  alist-map-key-count
+  alist-map-key-equivalence-function
+  alist-map-keys->list
+  alist-map-put
+  alist-map-put!
+  alist-map-replace-all
+  alist-map-replace-all!
+  alist-map-size
+  alist-map-update
+  alist-map-update!
+  alist-map-update-all
+  alist-map-update-all!
+  alist-map=
+  alist-map?
+  bag
+  bag->list
+  bag-add
+  bag-add!
+  bag-add-from
+  bag-add-from!
+  bag-clear
+  bag-clear!
+  bag-contains?
+  bag-copy
+  bag-count
+  bag-delete
+  bag-delete!
+  bag-delete-all
+  bag-delete-all!
+  bag-delete-all-from
+  bag-delete-all-from!
+  bag-delete-from
+  bag-delete-from!
+  bag-empty?
+  bag-equivalence-function
+  bag-fold-keys-left
+  bag-fold-keys-right
+  bag-fold-left
+  bag-fold-right
+  bag-get-any
+  bag-size
+  bag=
+  bag?
+  collection
+  collection->list
+  collection-clear
+  collection-clear!
+  collection-copy
+  collection-count
+  collection-delete-left
+  collection-delete-left!
+  collection-delete-right
+  collection-delete-right!
+  collection-empty?
+  collection-fold-keys-left
+  collection-fold-keys-right
+  collection-fold-left
+  collection-fold-right
+  collection-get-any
+  collection-get-left
+  collection-get-right
+  collection-insert-left
+  collection-insert-left!
+  collection-name
+  collection-ordering-function
+  collection-size
+  collection=
+  collection?
+  directional-collection?
+  flexible-sequence
+  flexible-sequence->list
+  flexible-sequence-clear
+  flexible-sequence-clear!
+  flexible-sequence-copy
+  flexible-sequence-count
+  flexible-sequence-delete-at
+  flexible-sequence-delete-at!
+  flexible-sequence-delete-left
+  flexible-sequence-delete-left!
+  flexible-sequence-delete-right
+  flexible-sequence-delete-right!
+  flexible-sequence-empty?
+  flexible-sequence-fold-keys-left
+  flexible-sequence-fold-keys-right
+  flexible-sequence-fold-left
+  flexible-sequence-fold-right
+  flexible-sequence-get-any
+  flexible-sequence-insert
+  flexible-sequence-insert!
+  flexible-sequence-insert-left
+  flexible-sequence-insert-left!
+  flexible-sequence-insert-right
+  flexible-sequence-insert-right!
+  flexible-sequence-size
+  flexible-sequence=
+  flexible-sequence?
+  limited-collection?
+  list
+  list->list
+  list-add
+  list-add!
+  list-add-from
+  list-add-from!
+  list-clear
+  list-clear!
+  list-contains?
+  list-copy
+  list-count
+  list-delete
+  list-delete!
+  list-delete-all
+  list-delete-all!
+  list-delete-all-from
+  list-delete-all-from!
+  list-delete-at
+  list-delete-at!
+  list-delete-from
+  list-delete-from!
+  list-delete-left
+  list-delete-left!
+  list-delete-right
+  list-delete-right!
+  list-empty?
+  list-equivalence-function
+  list-fold-left
+  list-fold-right
+  list-get-any
+  list-get-left
+  list-get-right
+  list-insert
+  list-insert!
+  list-insert-left
+  list-insert-left!
+  list-insert-right
+  list-insert-right!
+  list-ref
+  list-replace-from
+  list-replace-from!
+  list-set
+  list-set!
+  list-size
+  list=
+  list?
+  make-alist-map
+  make-bag
+  make-collection
+  make-flexible-sequence
+  make-list
+  make-map
+  make-sequence
+  make-set
+  make-string
+  make-vector
+  map
+  map->list
+  map-add-from
+  map-add-from!
+  map-clear
+  map-clear!
+  map-contains-key?
+  map-copy
+  map-count
+  map-delete
+  map-delete!
+  map-delete-from
+  map-delete-from!
+  map-empty?
+  map-equivalence-function
+  map-fold-keys-left
+  map-fold-keys-right
+  map-fold-left
+  map-fold-right
+  map-get
+  map-get-any
+  map-key-equivalence-function
+  map-keys->list
+  map-put
+  map-put!
+  map-size
+  map-update
+  map-update!
+  map=
+  map?
+  ordered-collection?
+  purely-mutable-collection?
+  sequence
+  sequence->list
+  sequence-add
+  sequence-add!
+  sequence-clear
+  sequence-clear!
+  sequence-copy
+  sequence-count
+  sequence-empty?
+  sequence-fold-keys-left
+  sequence-fold-keys-right
+  sequence-fold-left
+  sequence-fold-right
+  sequence-get-any
+  sequence-get-left
+  sequence-get-right
+  sequence-insert-right
+  sequence-insert-right!
+  sequence-ref
+  sequence-replace-from
+  sequence-replace-from!
+  sequence-set
+  sequence-set!
+  sequence-size
+  sequence=
+  sequence?
+  set
+  set->list
+  set-add
+  set-add!
+  set-add-from
+  set-add-from!
+  set-clear
+  set-clear!
+  set-contains?
+  set-copy
+  set-count
+  set-delete
+  set-delete!
+  set-delete-from
+  set-delete-from!
+  set-difference
+  set-difference!
+  set-empty?
+  set-equivalence-function
+  set-fold-keys-left
+  set-fold-keys-right
+  set-fold-left
+  set-fold-right
+  set-get-any
+  set-intersection
+  set-intersection!
+  set-size
+  set-subset?
+  set-symmetric-difference
+  set-symmetric-difference!
+  set-union
+  set-union!
+  set=
+  set?
+  string
+  string->list
+  string-contains?
+  string-copy
+  string-count
+  string-empty?
+  string-equivalence-function
+  string-fold-left
+  string-fold-right
+  string-get-any
+  string-get-left
+  string-get-right
+  string-ref
+  string-replace-from
+  string-replace-from!
+  string-set
+  string-set!
+  string-size
+  string=
+  string?
+  vector
+  vector->list
+  vector-contains?
+  vector-copy
+  vector-count
+  vector-empty?
+  vector-equivalence-function
+  vector-fold-left
+  vector-fold-right
+  vector-get-any
+  vector-get-left
+  vector-get-right
+  vector-ref
+  vector-replace-from
+  vector-replace-from!
+  vector-set
+  vector-set!
+  vector-size
+  vector=
+  vector?))
+
+((identifier (srfi 45))
+ (title "SRFI-45: Primitives for Expressing Iterative Lazy Algorithms")
+ (symbols delay eager force lazy))
+
+((identifier (srfi 46))
+ (title "SRFI-46: Basic Syntax-rules Extensions")
+ (symbols))
+
+((identifier (srfi 47))
+ (title "SRFI-47: Array")
+ (symbols
+  SRFI-25
+  SRFI-4
+  ac32
+  ac64
+  ar32
+  ar64
+  array-dimensions
+  array-in-bounds?
+  array-rank
+  array-ref
+  array-set!
+  array?
+  as16
+  as32
+  as64
+  as8
+  at1
+  au16
+  au32
+  au64
+  au8
+  equal?
+  make-array
+  make-shared-array))
+
+((identifier (srfi 48))
+ (title "SRFI-48: Intermediate Format Strings")
+ (symbols format))
+
+((identifier (srfi 49))
+ (title "SRFI-49: Indentation-sensitive syntax")
+ (symbols))
+
+((identifier (srfi 51))
+ (title "SRFI-51: Handling rest list")
+ (symbols
+  arg-and
+  arg-ands
+  arg-or
+  arg-ors
+  err-and
+  err-ands
+  err-or
+  err-ors
+  rest-values))
+
+((identifier (srfi 54)) (title "SRFI-54: Formatting") (symbols cat))
+
+((identifier (srfi 55))
+ (title "SRFI-55: require-extension")
+ (symbols require-extension))
+
+((identifier (srfi 57))
+ (title "SRFI 57: Records")
+ (symbols
+  define-record-scheme
+  define-record-type
+  record-compose
+  record-update
+  record-update!))
+
+((identifier (srfi 58)) (title "SRFI-58: Array notation") (symbols))
+
+((identifier (srfi 59))
+ (title "SRFI-59: Vicinity")
+ (symbols
+  home-vicinity
+  implementation-vicinity
+  in-vicinity
+  library-vicinity
+  make-vicinity
+  pathname->vicinity
+  program-vicinity
+  sub-vicinity
+  user-vicinity
+  vicinity:suffix?))
+
+((identifier (srfi 60))
+ (title "SRFI-60: Integers as bits")
+ (symbols
+  any-bits-set?
+  arithmetic-shift
+  ash
+  bit-count
+  bit-field
+  bit-set?
+  bitwise-and
+  bitwise-if
+  bitwise-ior
+  bitwise-merge
+  bitwise-not
+  bitwise-xor
+  booleans->integer
+  copy-bit
+  copy-bit-field
+  first-set-bit
+  integer->list
+  integer-length
+  list->integer
+  log2-binary-factors
+  logand
+  logbit?
+  logcount
+  logior
+  lognot
+  logtest
+  logxor
+  reverse-bit-field
+  rotate-bit-field))
+
+((identifier (srfi 61))
+ (title "SRFI 61: A more general cond clause")
+ (symbols cond))
+
+((identifier (srfi 62)) (title "SRFI 62: S-expression comments") (symbols))
+
+((identifier (srfi 63))
+ (title "SRFI 63: Homogeneous and Heterogeneous Arrays")
+ (symbols
+  a:bool
+  a:fixn16b
+  a:fixn32b
+  a:fixn64b
+  a:fixn8b
+  a:fixz16b
+  a:fixz32b
+  a:fixz64b
+  a:fixz8b
+  a:floc128b
+  a:floc16b
+  a:floc32b
+  a:floc64b
+  a:floq128d
+  a:floq32d
+  a:floq64d
+  a:flor128b
+  a:flor16b
+  a:flor32b
+  a:flor64b
+  array->list
+  array->vector
+  array-dimensions
+  array-in-bounds?
+  array-rank
+  array-ref
+  array-set!
+  array?
+  equal?
+  list->array
+  make-array
+  make-shared-array
+  vector->array))
+
+((identifier (srfi 64))
+ (title "SRFI 64: A Scheme API for test suites")
+ (symbols
+  test-apply
+  test-approximate
+  test-assert
+  test-begin
+  test-end
+  test-eq
+  test-equal
+  test-eqv
+  test-error
+  test-expect-fail
+  test-group
+  test-group-with-cleanup
+  test-match-all
+  test-match-any
+  test-match-name
+  test-match-nth
+  test-on-bad-count-simple
+  test-on-bad-end-name-simple
+  test-on-final-simple
+  test-on-group-begin-simple
+  test-on-group-end-simple
+  test-on-test-begin-simple
+  test-on-test-end-simple
+  test-passed?
+  test-read-eval-string
+  test-result-alist
+  test-result-clear
+  test-result-kind
+  test-result-ref
+  test-result-remove
+  test-result-set!
+  test-runner-aux-value
+  test-runner-aux-value!
+  test-runner-create
+  test-runner-current
+  test-runner-factory
+  test-runner-fail-count
+  test-runner-get
+  test-runner-group-path
+  test-runner-group-stack
+  test-runner-null
+  test-runner-on-bad-count
+  test-runner-on-bad-count!
+  test-runner-on-bad-end-name
+  test-runner-on-bad-end-name!
+  test-runner-on-final
+  test-runner-on-final!
+  test-runner-on-group-begin
+  test-runner-on-group-begin!
+  test-runner-on-group-end
+  test-runner-on-group-end!
+  test-runner-on-test-begin
+  test-runner-on-test-begin!
+  test-runner-pass-count
+  test-runner-reset
+  test-runner-simple
+  test-runner-skip-count
+  test-runner-test-name
+  test-runner-xfail-count
+  test-runner-xpass-count
+  test-runner?
+  test-skip
+  test-with-runner))
+
+((identifier (srfi 66))
+ (title "SRFI 66: Octet Vectors")
+ (symbols
+  list->u8vector
+  make-u8vector
+  u8vector
+  u8vector->list
+  u8vector-compare
+  u8vector-copy
+  u8vector-copy!
+  u8vector-length
+  u8vector-ref
+  u8vector-set!
+  u8vector=?
+  u8vector?))
+
+((identifier (srfi 67))
+ (title "SRFI 67: Compare Procedures")
+ (symbols
+  </<=?
+  </<?
+  <=/<=?
+  <=/<?
+  <=?
+  <?
+  =?
+  >/>=?
+  >/>?
+  >=/>=?
+  >=/>?
+  >=?
+  >?
+  boolean-compare
+  chain<=?
+  chain<?
+  chain=?
+  chain>=?
+  chain>?
+  char-compare
+  char-compare-ci
+  compare-by<
+  compare-by<=
+  compare-by=/<
+  compare-by=/>
+  compare-by>
+  compare-by>=
+  complex-compare
+  cond-compare
+  debug-compare
+  default-compare
+  if-not=?
+  if3
+  if<=?
+  if<?
+  if=?
+  if>=?
+  if>?
+  integer-compare
+  kth-largest
+  list-compare
+  list-compare-as-vector
+  max-compare
+  min-compare
+  not=?
+  number-compare
+  pair-compare
+  pair-compare-car
+  pair-compare-cdr
+  pairwise-not=?
+  rational-compare
+  real-compare
+  refine-compare
+  select-compare
+  string-compare
+  string-compare-ci
+  symbol-compare
+  vector-compare
+  vector-compare-as-list))
+
+((identifier (srfi 69))
+ (title "SRFI-69: Basic hash tables")
+ (symbols
+  Concept:HashTable
+  alist->hash-table
+  hash
+  hash-by-identity
+  hash-table->alist
+  hash-table-copy
+  hash-table-delete!
+  hash-table-equivalence-function
+  hash-table-exists?
+  hash-table-fold
+  hash-table-hash-function
+  hash-table-keys
+  hash-table-merge!
+  hash-table-ref
+  hash-table-ref/default
+  hash-table-set!
+  hash-table-size
+  hash-table-update!
+  hash-table-update!/default
+  hash-table-values
+  hash-table-walk
+  hash-table?
+  make-hash-table
+  string-ci-hash
+  string-hash))
+
+((identifier (srfi 70))
+ (title "SRFI 70: Numbers")
+ (symbols
+  |+inf.0|
+  |-inf.0|
+  exact-ceiling
+  exact-floor
+  exact-round
+  exact-truncate
+  expt
+  finite?
+  gcd
+  infinite?
+  lcm
+  modulo
+  quotient
+  remainder))
+
+((identifier (srfi 71))
+ (title "SRFI-71: Extended LET-syntax for multiple values")
+ (symbols
+  let
+  let*
+  letrec
+  uncons
+  uncons-2
+  uncons-3
+  uncons-4
+  uncons-cons
+  unlist
+  unvector
+  values->list
+  values->vector))
+
+((identifier (srfi 72))
+ (title "SRFI 72: Simple hygienic macros.")
+ (symbols
+  around-syntax
+  begin-for-syntax
+  bound-identifier=?
+  datum->syntax-object
+  define-syntax
+  free-identifier=?
+  identifier?
+  let-syntax
+  letrec-syntax
+  literal-identifier=?
+  make-capturing-identifier
+  quasisyntax
+  syntax
+  syntax-case
+  syntax-error
+  syntax-object->datum
+  syntax-rules
+  with-syntax))
+
+((identifier (srfi 74))
+ (title "SRFI 74: Octet-Addressed Binary Blocks")
+ (symbols
+  blob->sint-list
+  blob->u8-list
+  blob->uint-list
+  blob-copy
+  blob-copy!
+  blob-length
+  blob-s16-native-ref
+  blob-s16-native-set!
+  blob-s16-ref
+  blob-s16-set!
+  blob-s32-native-ref
+  blob-s32-native-set!
+  blob-s32-ref
+  blob-s32-set!
+  blob-s64-native-ref
+  blob-s64-native-set!
+  blob-s64-ref
+  blob-s64-set!
+  blob-s8-ref
+  blob-s8-set!
+  blob-sint-ref
+  blob-sint-set!
+  blob-u16-native-ref
+  blob-u16-native-set!
+  blob-u16-ref
+  blob-u16-set!
+  blob-u32-native-ref
+  blob-u32-native-set!
+  blob-u32-ref
+  blob-u32-set!
+  blob-u64-native-ref
+  blob-u64-native-set!
+  blob-u64-ref
+  blob-u64-set!
+  blob-u8-ref
+  blob-u8-set!
+  blob-uint-ref
+  blob-uint-set!
+  blob=?
+  blob?
+  endianness
+  make-blob
+  sint-list->blob
+  u8-list->blob
+  uint-list->blob))
+
+((identifier (srfi 78))
+ (title "SRFI 78: Lightweight testing")
+ (symbols
+  check
+  check-ec
+  check-passed?
+  check-report
+  check-reset!
+  check-set-mode!))
+
+((identifier (srfi 86))
+ (title
+  "SRFI 86: MU and NU simulating VALUES & CALL-WITH-VALUES, and their related LET-syntax")
+ (symbols alet alet* mu nu))
+
+((identifier (srfi 87)) (title "SRFI 87: => in case clauses") (symbols case))
+
+((identifier (srfi 88))
+ (title "SRFI 88: Keyword objects")
+ (symbols keyword->string keyword? string->keyword))
+
+((identifier (srfi 89))
+ (title "SRFI 89: Optional positional and named parameters")
+ (symbols define* lambda*))
+
+((identifier (srfi 90))
+ (title "SRFI 90: Extensible hash table constructor")
+ (symbols make-table))
+
+((identifier (srfi 94))
+ (title "SRFI 94: Type-Restricted Numerical Functions")
+ (symbols
+  abs
+  atan
+  integer-expt
+  integer-log
+  integer-sqrt
+  ln
+  make-polar
+  make-rectangular
+  mod
+  modulo
+  quo
+  quotient
+  real-acos
+  real-asin
+  real-atan
+  real-cos
+  real-exp
+  real-expt
+  real-ln
+  real-log
+  real-sin
+  real-sqrt
+  real-tan
+  rem
+  remainder))
+
+((identifier (srfi 95))
+ (title "SRFI 95: Sorting and Merging")
+ (symbols merge merge! sort sort! sorted?))
+
+((identifier (srfi 96))
+ (title "SRFI-96: SLIB Prerequisites")
+ (symbols
+  call-with-open-ports
+  call-with-open-ports
+  close-port
+  current-error-port
+  defmacro
+  defmacro:eval
+  defmacro:expand*
+  defmacro:load
+  delete-file
+  file-exists?
+  file-position
+  file-position
+  force-output
+  force-output
+  gentemp
+  getenv
+  identity
+  last-pair
+  macro:eval
+  macro:expand
+  macro:load
+  macroexpand
+  make-exchanger
+  nil
+  open-file
+  output-port-height
+  output-port-height
+  output-port-width
+  output-port-width
+  port?
+  program-arguments
+  scheme-file-suffix
+  scheme-implementation-home-page
+  scheme-implementation-type
+  scheme-implementation-version
+  slib:error
+  slib:eval
+  slib:eval-load
+  slib:exit
+  slib:features
+  slib:form-feed
+  slib:load
+  slib:load-compiled
+  slib:load-source
+  slib:tab
+  slib:warn
+  software-type
+  system
+  t
+  tmpnam
+  with-load-pathname))
+
+((identifier (srfi 97)) (title "SRFI-97: SRFI Libraries") (symbols))
+
+((identifier (srfi 98))
+ (title "SRFI 98: An interface to access environment variables.")
+ (symbols get-environment-variable get-environment-variables))
+
+((identifier (srfi 99))
+ (title "SRFI 99: ERR5RS Records")
+ (symbols
+  make-rtd
+  record-rtd
+  record?
+  rtd-accessor
+  rtd-all-field-names
+  rtd-constructor
+  rtd-field-names
+  rtd-mutator
+  rtd-name
+  rtd-parent
+  rtd-predicate
+  rtd?))
+
+((identifier (srfi 100))
+ (title "SRFI 100: define-lambda-object")
+ (symbols define-lambda-object))
+
+((identifier (srfi 101))
+ (title "SRFI 101: Purely Functional Random-Access Pairs and Lists")
+ (symbols))
+
+((identifier (srfi 105)) (title "SRFI-105: SRFI Libraries") (symbols))
+
+((identifier (srfi 106)) (title "SRFI-106: SRFI Libraries") (symbols))
+
+((identifier (srfi 108)) (title "SRFI-108: SRFI Libraries") (symbols))
+
+((identifier (srfi 109)) (title "SRFI-109: SRFI Libraries") (symbols))
+
+((identifier (srfi 110)) (title "SRFI-110: SRFI Libraries") (symbols))
+
+((identifier (srfi 111)) (title "SRFI-111: SRFI Libraries") (symbols))
+
+((identifier (srfi 112)) (title "SRFI-112: Environment Inquiry") (symbols))
+
+((identifier (srfi 113)) (title "SRFI-113: Sets and bags") (symbols))
+
+((identifier (srfi 114)) (title "SRFI-114: Comparators") (symbols))
+
+((identifier (srfi 115))
+ (title "SRFI-115: Scheme Regular Expressions")
+ (symbols))
+
+((identifier (srfi 116)) (title "SRFI-116: Immutable List Library") (symbols))
+
+((identifier (srfi 117)) (title "SRFI-117: Queues based on lists") (symbols))
+
+((identifier (srfi 120)) (title "SRFI-120: Timer APIs") (symbols))
+
+((identifier (srfi 121)) (title "SRFI-121: Generators") (symbols))
+
+((identifier (srfi 123))
+ (title "SRFI-123: Generic accessor and modifier operators")
+ (symbols))
+
+((identifier (srfi 124)) (title "SRFI-124: Ephemerons") (symbols))
+
+((identifier (srfi 125))
+ (title "SRFI-125: Intermediate hash tables")
+ (symbols))
+
+((identifier (srfi 126)) (title "SRFI-126:") (symbols))
+
+((identifier (srfi 127)) (title "SRFI-127: Lazy Sequences") (symbols))
+
+((identifier (srfi 128)) (title "SRFI-128: Comparators (reduced)") (symbols))
+
+((identifier (srfi 129)) (title "SRFI-129: Titlecase procedures") (symbols))
+
+((identifier (srfi 130))
+ (title "SRFI-130: Cursor-based string library")
+ (symbols))
+
+((identifier (srfi 131))
+ (title "SRFI-131: ERR5RS Record Syntax (reduced)")
+ (symbols))
+
+((identifier (srfi 132)) (title "SRFI-132: Sort Libraries") (symbols))
+
+((identifier (srfi 133))
+ (title "SRFI-133: Vector Library (R7RS-compatible)")
+ (symbols))
+
+((identifier (srfi 134)) (title "SRFI-134: Immutable Deques") (symbols))
+
