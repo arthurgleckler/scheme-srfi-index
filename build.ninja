@@ -1,0 +1,27 @@
+
+
+rule sed_io
+    command = exec sed -E -f ${sed_script} < ${sed_input} > ${sed_output}
+
+rule racket_io
+    command = exec racket -- ${racket_script} < ${racket_input} > ${racket_output}
+
+rule chibi_io
+    command = exec chibi-scheme -- ${chibi_script} < ${chibi_input} > ${chibi_output}
+
+
+build ./chibi-modules--outputs.txt : sed_io | ./chibi-modules.sed ./chibi-modules--inputs.txt
+    sed_script = ./chibi-modules.sed
+    sed_input = ./chibi-modules--inputs.txt
+    sed_output = ./chibi-modules--outputs.txt
+
+build ./chibi-definitions--outputs.txt : chibi_io | ./chibi-definitions.ss ./chibi-modules--inputs.txt
+    chibi_script = ./chibi-definitions.ss
+    chibi_input = ./chibi-modules--inputs.txt
+    chibi_output = ./chibi-definitions--outputs.txt
+
+build ./shiro-wiki--outputs.txt : racket_io | ./shiro-wiki.rkt ./shiro-wiki--inputs.txt
+    racket_script = ./shiro-wiki.rkt
+    racket_input = ./shiro-wiki--inputs.txt
+    racket_output = ./shiro-wiki--outputs.txt
+

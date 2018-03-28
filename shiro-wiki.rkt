@@ -1,14 +1,13 @@
-#!/usr/bin/racket
+#! /usr/bin/racket
 #lang racket
 
 (require racket/pretty)
-;(require racket/base)
 (require srfi/13)
 
 
-(define (extract-srfi-data _db-path)
+(define (extract-srfi-data)
 	(define _db-data
-		(with-input-from-file _db-path read-all))
+		(read-all))
 	(define _srfi-data
 		(filter (compose (curry string-prefix-ci? "srfi-") car) _db-data))
 	(define _srfi-definitions
