@@ -1,4 +1,4 @@
-#!/usr/bin/env chibi-scheme
+#! /usr/bin/env chibi-scheme
 
 (import (scheme base))
 (import (scheme write))
@@ -15,6 +15,5 @@
 					(else (if (find-module (list 'srfi n)) n #f))))
 			(iota 200))))
 
-(write (chibi-resolve-modules))
-(newline)
+(for-each (lambda (n) (write n) (newline)) (chibi-resolve-modules))
 
