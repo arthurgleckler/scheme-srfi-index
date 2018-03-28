@@ -21,7 +21,7 @@
 					(cadadr (assoc 'identifier _left))
 					(cadadr (assoc 'identifier _right))))))
 	(for-each (lambda (_definition) (pretty-write _definition) (newline)) _srfi-definitions-sorted)
-	(void)
+	#t
 )
 
 
@@ -40,7 +40,8 @@
 	`(
 		(identifier (srfi ,_identifier))
 		(title ,_title)
-		(symbols ,@_symbols)))
+		(symbols ,@_symbols)
+		(source shiro)))
 
 
 
