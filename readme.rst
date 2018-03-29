@@ -20,6 +20,20 @@ For details see the mailing list thread on ``srfi-discuss@srfi.schemers.org``:
 
 
 
+Workflow
+========
+
+For those wanting to contribute with indices for various SRFI's the workflow would be like this:
+
+* fork this repository on GitHub;
+* copy the file from `<./srfi-templates>`_ to `<./srfi-indices>`_;
+* start filling in the `???` with the proper values;
+* submit a pull request to this repository;
+* the pull request would then be merged;
+
+
+
+
 Syntax
 ======
 
@@ -29,8 +43,8 @@ and a few examples can be found in `<./syntax-examples.txt>`_.
 
 
 
-SRFI templates
-==============
+Templates
+=========
 
 There are available files for each SRFI, `srfi-templates <./srfi-templates>`_,
 with definitions automatically extracted from the following places:
@@ -45,5 +59,4 @@ with definitions automatically extracted from the following places:
 The file has a syntax compliant with the proposed syntax, and wherever the symbol ``???`` apears it should be inserted by human intervention.
 
 Also it is not guaranteed that all the definitions actually found in the SRFI's are actually present;  or that all the listed symbols are actually correct.
-For example in SRFI-0 the symbol ``features`` is missing from the extracted data, although it is defined in the actual document.
 
