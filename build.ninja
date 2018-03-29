@@ -34,5 +34,5 @@ build ./scripts-data/merge--outputs.txt : racket_io | ./scripts/merge--process.r
     racket_script = ./scripts/merge--process.rkt
     racket_input = /dev/null
     racket_output = ./scripts-data/merge--outputs.txt
-    racket_arguments = ./scripts-data/shiro-wiki--outputs.txt ./scripts-data/chibi-definitions--outputs.txt ./scripts-data/srfi-data--outputs.txt
+    racket_arguments = ./srfi-templates ./scripts-data/shiro-wiki--outputs.txt ./scripts-data/chibi-definitions--outputs.txt ./scripts-data/srfi-data--outputs.txt
 

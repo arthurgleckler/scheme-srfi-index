@@ -6,7 +6,7 @@
 (require srfi/13)
 
 
-(define (merge-indices . _files)
+(define (merge-indices _templates . _files)
 	(define _data
 		(append-map (curryr with-input-from-file read-all) _files))
 	(define _data-grouped
@@ -20,7 +20,15 @@
 					(cadadr (assoc 'identifier (rest _left)))
 					(cadadr (assoc 'identifier (rest _right)))))))
 	(parameterize ((pretty-print-columns 40))
-		(for-each (lambda (_definition) (pretty-write _definition) (newline)) _data-sorted))
+		(for-each
+			(lambda (_definition)
+				(define _output-path (format "~a/srfi-~a.ss" _templates (cadadr (assoc 'identifier (rest _definition)))))
+				(if (file-exists? _output-path) (delete-file _output-path) #t)
+				(pretty-write _definition) (newline)
+				(with-output-to-file _output-path
+					(lambda () (pretty-write _definition)))
+			)
+			_data-sorted))
 	(void)
 )
 
