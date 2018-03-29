@@ -1,7 +1,7 @@
 
 (library
 	
-	(id <identifier>)
+	(identifier <identifier>)
 	; * the `<identifier>` should be an s-expression, perhaps similar to what one expects to put in R7RS `import`;
 	
 	(description <string> ...)

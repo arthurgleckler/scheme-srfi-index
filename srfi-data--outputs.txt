@@ -1,0 +1,803 @@
+((identifier (srfi 0))
+ (title "SRFI-0 -- Feature-based conditional expansion construct")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 1))
+ (title "SRFI-1 -- List Library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 2))
+ (title
+  "SRFI-2 -- AND-LET*: an AND with local bindings, a guarded LET* special form")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 3))
+ (title "SRFI-3 -- List-Set Library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 4))
+ (title "SRFI-4 -- Homogeneous numeric vector datatypes")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 5))
+ (title "SRFI-5 -- A compatible let form with signatures and rest arguments")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 6))
+ (title "SRFI-6 -- Basic String Ports")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 7))
+ (title "SRFI-7 -- Feature-based program configuration language")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 8))
+ (title "SRFI-8 -- receive: Binding to multiple values")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 9))
+ (title "SRFI-9 -- Defining Record Types")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 10))
+ (title "SRFI-10 -- #, external form")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 11))
+ (title "SRFI-11 -- Syntax for receiving multiple values")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 12))
+ (title "SRFI-12 -- Exception Handling")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 13))
+ (title "SRFI-13 -- String Libraries")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 14))
+ (title "SRFI-14 -- Character-set Library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 15))
+ (title "SRFI-15 -- Syntax for dynamic scoping")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 16))
+ (title "SRFI-16 -- Syntax for procedures of variable arity")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 17))
+ (title "SRFI-17 -- Generalized set!")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 18))
+ (title "SRFI-18 -- Multithreading support")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 19))
+ (title "SRFI-19 -- Time Data Types and Procedures")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 20))
+ (title "SRFI-20 -- Simple object system")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 21))
+ (title "SRFI-21 -- Real-time multithreading support")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 22))
+ (title "SRFI-22 -- Running Scheme Scripts on Unix")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 23))
+ (title "SRFI-23 -- Error reporting mechanism")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 24))
+ (title "SRFI-24 -- Define-syntax in local lexical scopes")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 25))
+ (title "SRFI-25 -- Multi-dimensional Array Primitives")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 26))
+ (title "SRFI-26 -- Notation for Specializing Parameters without Currying")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 27))
+ (title "SRFI-27 -- Sources of Random Bits")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 28))
+ (title "SRFI-28 -- Basic Format Strings ")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 29))
+ (title "SRFI-29 -- Localization ")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 30))
+ (title "SRFI-30 -- Nested Multi-line Comments")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 31))
+ (title "SRFI-31 -- A special form `rec' for recursive evaluation")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 32))
+ (title "SRFI-32 -- Sort Libraries")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 33))
+ (title "SRFI-33 -- Integer Bitwise-operation Library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 34))
+ (title "SRFI-34 -- Exception Handling for Programs")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 35))
+ (title "SRFI-35 -- Conditions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 36))
+ (title "SRFI-36 -- I/O Conditions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 37))
+ (title "SRFI-37 -- args-fold: a program argument processor")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 38))
+ (title "SRFI-38 -- External Representation for Data With Shared Structure")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 39))
+ (title "SRFI-39 -- Parameter objects")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 40))
+ (title "SRFI-40 -- A Library of Streams")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 41))
+ (title "SRFI-41 -- Streams")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 42))
+ (title "SRFI-42 -- Eager Comprehensions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 43))
+ (title "SRFI-43 -- Vector library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 44))
+ (title "SRFI-44 -- Collections")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 45))
+ (title "SRFI-45 -- Primitives for Expressing Iterative Lazy Algorithms")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 46))
+ (title "SRFI-46 -- Basic Syntax-rules Extensions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 47))
+ (title "SRFI-47 -- Array")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 48))
+ (title "SRFI-48 -- Intermediate Format Strings")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 49))
+ (title "SRFI-49 -- Indentation-sensitive syntax")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 50))
+ (title "SRFI-50 -- Mixing Scheme and C")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 51))
+ (title "SRFI-51 -- Handling rest list")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 52))
+ (title "SRFI-52 -- Permitting and Supporting Extended Character Sets")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 53))
+ (title "SRFI-53 -- Syntactic computations with computation-rules")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 54))
+ (title "SRFI-54 -- Formatting")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 55))
+ (title "SRFI-55 -- require-extension")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 56))
+ (title "SRFI-56 -- Binary I/O")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 57))
+ (title "SRFI-57 -- Records")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 58))
+ (title "SRFI-58 -- Array Notation")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 59))
+ (title "SRFI-59 -- Vicinity")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 60))
+ (title "SRFI-60 -- Integers as Bits")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 61))
+ (title "SRFI-61 -- A more general cond clause")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 62))
+ (title "SRFI-62 -- S-expression comments")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 63))
+ (title "SRFI-63 -- Homogeneous and Heterogeneous Arrays")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 64))
+ (title "SRFI-64 -- A Scheme API for test suites")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 65))
+ (title
+  "SRFI-65 -- define-immutable: A Syntax to Define Identifiers With Immutable Values")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 66))
+ (title "SRFI-66 -- Octet Vectors")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 67))
+ (title "SRFI-67 -- Compare Procedures")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 68))
+ (title "SRFI-68 -- Comprehensive I/O")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 69))
+ (title "SRFI-69 -- Basic hash tables")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 70))
+ (title "SRFI-70 -- Numbers")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 71))
+ (title "SRFI-71 -- Extended LET-syntax for multiple values")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 72))
+ (title "SRFI-72 -- Hygienic macros")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 73))
+ (title "SRFI-73 -- Exact Infinities")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 74))
+ (title "SRFI-74 -- Octet-Addressed Binary Blocks")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 75))
+ (title "SRFI-75 -- R6RS Unicode data")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 76))
+ (title "SRFI-76 -- R6RS Records")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 77))
+ (title "SRFI-77 -- Preliminary Proposal for R6RS Arithmetic")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 78))
+ (title "SRFI-78 -- Lightweight testing")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 79))
+ (title "SRFI-79 -- Primitive I/O")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 80))
+ (title "SRFI-80 -- Stream I/O")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 81))
+ (title "SRFI-81 -- Port I/O")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 82))
+ (title "SRFI-82 -- Stream Ports")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 83))
+ (title "SRFI-83 -- R6RS Library Syntax")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 84))
+ (title "SRFI-84 -- Universal Identifiers")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 85))
+ (title "SRFI-85 -- Recursive Equivalence Predicates")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 86))
+ (title
+  "SRFI-86 -- MU and NU simulating VALUES & CALL-WITH-VALUES, and their related LET-syntax")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 87))
+ (title "SRFI-87 -- => in case clauses")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 88))
+ (title "SRFI-88 -- Keyword objects")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 89))
+ (title "SRFI-89 -- Optional positional and named parameters")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 90))
+ (title "SRFI-90 -- Extensible hash table constructor")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 91))
+ (title "SRFI-91 -- Extended ports")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 92))
+ (title "SRFI-92 -- ALAMBDA and ALAMBDA*")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 93))
+ (title "SRFI-93 -- R6RS Syntax-Case Macros")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 94))
+ (title "SRFI-94 -- Type-Restricted Numerical Functions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 95))
+ (title "SRFI-95 -- Sorting and Merging")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 96))
+ (title "SRFI-96 -- SLIB Prerequisites")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 97))
+ (title "SRFI-97 -- SRFI Libraries")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 98))
+ (title "SRFI-98 -- An interface to access environment variables")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 99))
+ (title "SRFI-99 -- ERR5RS Records")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 100))
+ (title "SRFI-100 -- define-lambda-object")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 101))
+ (title "SRFI-101 -- Purely Functional Random-Access Pairs and Lists")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 102))
+ (title "SRFI-102 -- Procedure Arity Inspection")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 103))
+ (title "SRFI-103 -- Library Files")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 104))
+ (title "SRFI-104 -- Library Files Utilities")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 105))
+ (title "SRFI-105 -- Curly-infix-expressions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 106))
+ (title "SRFI-106 -- Basic socket interface")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 107))
+ (title "SRFI-107 -- XML reader syntax")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 108))
+ (title "SRFI-108 -- Named quasi-literal constructors")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 109))
+ (title "SRFI-109 -- Extended string quasi-literals")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 110))
+ (title "SRFI-110 -- Sweet-expressions (t-expressions)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 111))
+ (title "SRFI-111 -- Boxes")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 112))
+ (title "SRFI-112 -- Environment Inquiry")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 113))
+ (title "SRFI-113 -- Sets and bags")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 114))
+ (title "SRFI-114 -- Comparators")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 115))
+ (title "SRFI-115 -- Scheme Regular Expressions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 116))
+ (title "SRFI-116 -- Immutable List Library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 117))
+ (title "SRFI-117 -- Mutable Queues")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 118))
+ (title "SRFI-118 -- Simple adjustable-size strings")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 119))
+ (title "SRFI-119 -- wisp: simpler indentation-sensitive scheme")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 120))
+ (title "SRFI-120 -- Timer APIs")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 121))
+ (title "SRFI-121 -- Generators")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 122))
+ (title "SRFI-122 -- Nonempty Intervals and Generalized Arrays")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 123))
+ (title "SRFI-123 -- Generic accessor and modifier operators")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 124))
+ (title "SRFI-124 -- Ephemerons")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 125))
+ (title "SRFI-125 -- Intermediate hash tables")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 126))
+ (title "SRFI-126 -- R6RS-based hashtables")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 127))
+ (title "SRFI-127 -- Lazy Sequences")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 128))
+ (title "SRFI-128 -- Comparators (reduced)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 129))
+ (title "SRFI-129 -- Titlecase procedures")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 130))
+ (title "SRFI-130 -- Cursor-based string library")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 131))
+ (title "SRFI-131 -- ERR5RS Record Syntax (reduced)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 132))
+ (title "SRFI-132 -- Sort Libraries")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 133))
+ (title "SRFI-133 -- Vector Library (R7RS-compatible)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 134))
+ (title "SRFI-134 -- Immutable Deques")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 135))
+ (title "SRFI-135 -- Immutable Texts")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 136))
+ (title "SRFI-136 -- Extensible record types")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 137))
+ (title "SRFI-137 -- Minimal Unique Types")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 138))
+ (title "SRFI-138 -- Compiling Scheme programs to executables")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 139))
+ (title "SRFI-139 -- Syntax parameters")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 140))
+ (title "SRFI-140 -- Immutable Strings")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 141))
+ (title "SRFI-141 -- Integer division")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 142))
+ (title "SRFI-142 -- Bitwise Operations")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 143))
+ (title "SRFI-143 -- Fixnums")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 144))
+ (title "SRFI-144 -- Flonums")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 145))
+ (title "SRFI-145 -- Assumptions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 146))
+ (title "SRFI-146 -- Mappings")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 147))
+ (title "SRFI-147 -- Custom macro transformers")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 148))
+ (title "SRFI-148 -- Eager syntax-rules")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 149))
+ (title "SRFI-149 -- Basic Syntax-rules Template Extensions")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 150))
+ (title "SRFI-150 -- Hygienic ERR5RS Record Syntax (reduced)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 151))
+ (title "SRFI-151 -- Bitwise Operations")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 152))
+ (title "SRFI-152 -- String Library (reduced)")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 153))
+ (title "SRFI-153 -- Ordered Sets")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 154))
+ (title "SRFI-154 -- First-class dynamic extents")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 155))
+ (title "SRFI-155 -- Promises")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 156))
+ (title "SRFI-156 -- Syntactic combiners for binary predicates")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 157))
+ (title "SRFI-157 -- Continuation marks")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 158))
+ (title "SRFI-158 -- Generators and Accumulators")
+ (symbols)
+ (source srfi-data))
+
+((identifier (srfi 159))
+ (title "SRFI-159 -- Combinator Formatting")
+ (symbols)
+ (source srfi-data))
+
