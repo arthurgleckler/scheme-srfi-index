@@ -21,7 +21,7 @@
 					(cadadr (assoc 'identifier _left))
 					(cadadr (assoc 'identifier _right))))))
 	(for-each (lambda (_definition) (pretty-write _definition) (newline)) _srfi-definitions-sorted)
-	#t
+	(void)
 )
 
 
