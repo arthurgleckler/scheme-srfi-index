@@ -1,0 +1,52 @@
+(library
+ (identifier (srfi 37))
+ (title
+  "SRFI-37 -- args-fold: a program argument processor")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-37/srfi-37.html")
+ (definitions
+  (args-fold
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (option
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (option-names
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (option-optional-arg?
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (option-processor
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (option-required-arg?
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

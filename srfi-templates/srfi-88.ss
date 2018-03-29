@@ -1,0 +1,30 @@
+(library
+ (identifier (srfi 88))
+ (title "SRFI-88 -- Keyword objects")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-88/srfi-88.html")
+ (definitions
+  (keyword->string
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (keyword?
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (string->keyword
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

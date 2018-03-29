@@ -1,0 +1,30 @@
+(library
+ (identifier (srfi 6))
+ (title "SRFI-6 -- Basic String Ports")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-6/srfi-6.html")
+ (definitions
+  (get-output-string
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro chibi))
+  (open-input-string
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro chibi))
+  (open-output-string
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro chibi)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

@@ -1,0 +1,38 @@
+(library
+ (identifier (srfi 45))
+ (title
+  "SRFI-45 -- Primitives for Expressing Iterative Lazy Algorithms")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-45/srfi-45.html")
+ (definitions
+  (delay
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (eager
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (force
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (lazy
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

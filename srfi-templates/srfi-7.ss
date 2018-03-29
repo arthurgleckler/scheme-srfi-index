@@ -1,0 +1,45 @@
+(library
+ (identifier (srfi 7))
+ (title
+  "SRFI-7 -- Feature-based program configuration language")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-7/srfi-7.html")
+ (definitions
+  (code
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (feature-cond
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (files
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (program
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro))
+  (requires
+   (type ???)
+   (category ???)
+   (contract ???)
+   (description ???)
+   (link ???)
+   (sources! shiro)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

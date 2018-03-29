@@ -1,0 +1,15 @@
+(library
+ (identifier (srfi 87))
+ (title "SRFI-87 -- => in case clauses")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-87/srfi-87.html")
+ (definitions
+  (case (type ???)
+    (category ???)
+    (contract ???)
+    (description ???)
+    (link ???)
+    (sources! shiro)))
+ (borrows ???)
+ (categories ???)
+ (types ???))

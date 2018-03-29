@@ -1,0 +1,22 @@
+(library
+ (identifier (srfi 11))
+ (title
+  "SRFI-11 -- Syntax for receiving multiple values")
+ (description ???)
+ (link "https://srfi.schemers.org/srfi-11/srfi-11.html")
+ (definitions
+  (let*-values (type ???)
+    (category ???)
+    (contract ???)
+    (description ???)
+    (link ???)
+    (sources! shiro chibi))
+  (let-values (type ???)
+    (category ???)
+    (contract ???)
+    (description ???)
+    (link ???)
+    (sources! shiro chibi)))
+ (borrows ???)
+ (categories ???)
+ (types ???))
