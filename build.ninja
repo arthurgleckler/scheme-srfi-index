@@ -4,10 +4,10 @@ rule sed_io
     command = sed -E -f ${sed_script} < ${sed_input} > ${sed_output}.tmp && mv -- ${sed_output}.tmp ${sed_output}
 
 rule racket_io
-    command = racket -- ${racket_script} < ${racket_input} > ${racket_output}.tmp && mv -- ${racket_output}.tmp ${racket_output}
+    command = racket -- ${racket_script} ${racket_arguments} < ${racket_input} > ${racket_output}.tmp && mv -- ${racket_output}.tmp ${racket_output}
 
 rule chibi_io
-    command = chibi-scheme -- ${chibi_script} < ${chibi_input} > ${chibi_output}.tmp && mv -- ${chibi_output}.tmp ${chibi_output}
+    command = chibi-scheme -- ${chibi_script} ${chibi_arguments} < ${chibi_input} > ${chibi_output}.tmp && mv -- ${chibi_output}.tmp ${chibi_output}
 
 
 build ./chibi-modules--outputs.txt : sed_io | ./chibi-modules.sed ./chibi-modules--inputs.txt
@@ -24,4 +24,15 @@ build ./shiro-wiki--outputs.txt : racket_io | ./shiro-wiki.rkt ./shiro-wiki--inp
     racket_script = ./shiro-wiki.rkt
     racket_input = ./shiro-wiki--inputs.txt
     racket_output = ./shiro-wiki--outputs.txt
+
+build ./srfi-data--outputs.txt : racket_io | ./srfi-data.rkt ./srfi-data--inputs.txt
+    racket_script = ./srfi-data.rkt
+    racket_input = ./srfi-data--inputs.txt
+    racket_output = ./srfi-data--outputs.txt
+
+build ./merge--outputs.txt : racket_io | ./merge.rkt ./shiro-wiki--outputs.txt ./chibi-definitions--outputs.txt ./srfi-data--outputs.txt
+    racket_script = ./merge.rkt
+    racket_input = /dev/null
+    racket_output = ./merge--outputs.txt
+    racket_arguments = ./shiro-wiki--outputs.txt ./chibi-definitions--outputs.txt ./srfi-data--outputs.txt
 
