@@ -2,7 +2,11 @@
  (identifier (srfi 128))
  (title
   "SRFI-128 -- Comparators (reduced)")
- (description ???)
+ (description "This SRFI provides _comparators_, which bundle a type test predicate, an
+equality predicate, an ordering predicate, and a hash function (the last
+two are optional) into a single Scheme object. By packaging these
+procedures together, they can be treated as a single item for use in the
+implementation of data structures.")
  (link "https://srfi.schemers.org/srfi-128/srfi-128.html")
  (definitions
   (<=?

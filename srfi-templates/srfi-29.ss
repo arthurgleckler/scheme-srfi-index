@@ -1,7 +1,11 @@
 (library
  (identifier (srfi 29))
  (title "SRFI-29 -- Localization ")
- (description ???)
+ (description "This document specifies an interface to retrieving and displaying locale
+sensitive messages. A Scheme program can register one or more
+translations of templated messages, and then write Scheme code that can
+transparently retrieve the appropriate message for the locale under
+which the Scheme system is running.")
  (link "https://srfi.schemers.org/srfi-29/srfi-29.html")
  (definitions
   (SRFI-29

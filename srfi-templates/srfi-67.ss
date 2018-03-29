@@ -1,7 +1,30 @@
 (library
  (identifier (srfi 67))
  (title "SRFI-67 -- Compare Procedures")
- (description ???)
+ (description "This SRFI can be seen as an extension of the standard procedures =, <,
+char<? etc. of R⁵RS -- or even as a replacement. The primary design
+aspect in this SRFI is the separation of _representing_ a total order
+and _using it._ For representing the order, we have chosen for truly
+3-way comparisons. For using it we provide an extensive set of
+operations, each of which accepts a procedure used for comparison. Since
+these compare procedures are often optional, comparing built-in types is
+as convenient as R⁵RS , sometimes more convenient: For example, testing
+if the integer index _i_ lies in the integer range {0, ..., _n_ - 1} can
+be written as (<=/<? 0 i n), implicitly invoking default-compare.
+
+As soon as new total orders are required, the infrastructure provided by
+this SRFI is far more convenient and often even more efficient than
+building each total order from scratch.
+
+Moreover, in case Scheme users and implementors find this mechanism
+useful and adopt it, the benefit of having a uniform interface to total
+orders to be used in data structures will manifest itself. Most
+concretely, a new sorting procedure in the spirit of this SRFI would
+have the interface (my-sort [ compare ]       xs), using default-compare
+if the optional _compare_ was not provided. Then my-sort could be
+defined using the entire infrastructure of this SRFI: Efficient 2- and
+3-way branching, testing for chains and pairwise inequality, min/max,
+and general order statistics.")
  (link "https://srfi.schemers.org/srfi-67/srfi-67.html")
  (definitions
   (</<=?

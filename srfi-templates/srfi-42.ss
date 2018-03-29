@@ -2,7 +2,11 @@
  (identifier (srfi 42))
  (title
   "SRFI-42 -- Eager Comprehensions")
- (description ???)
+ (description "This SRFI defines a modular and portable mechanism for eager
+comprehensions extending the algorithmic language Scheme [R5RS]. An
+eager comprehension is a convenient notation for one or more nested or
+parallel loops generating a sequence of values, and accumulating this
+sequence into a result.")
  (link "https://srfi.schemers.org/srfi-42/srfi-42.html")
  (definitions
   (:

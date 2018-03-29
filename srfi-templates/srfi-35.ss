@@ -1,7 +1,10 @@
 (library
  (identifier (srfi 35))
  (title "SRFI-35 -- Conditions")
- (description ???)
+ (description "The SRFI defines constructs for creating and inspecting _condition_
+types and values. A condition value encapsulates information about an
+exceptional situation, or exception. This SRFI also defines a few basic
+condition types.")
  (link "https://srfi.schemers.org/srfi-35/srfi-35.html")
  (definitions
   (&condition

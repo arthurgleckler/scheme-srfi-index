@@ -2,7 +2,18 @@
  (identifier (srfi 130))
  (title
   "SRFI-130 -- Cursor-based string library")
- (description ???)
+ (description "R5RS Scheme has an impoverished set of string-processing utilities,
+which is a problem for authors of portable code. Although R7RS provides
+some extensions and improvements, it is still very incomplete. This SRFI
+proposes a coherent and comprehensive set of string-processing
+procedures; it is accompanied by a portable sample implementation of the
+spec.
+
+This SRFI is derived from SRFI 13. The biggest difference is that it
+allows subsequences of strings to be specified by _cursors_ as well as
+the traditional string indexes. In addition, it omits the comparison,
+case-mapping, and mutation operations of SRFI 13, as well as all
+procedures already present in R7RS.")
  (link "https://srfi.schemers.org/srfi-130/srfi-130.html")
  (definitions
   (reverse-list->string

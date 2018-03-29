@@ -2,7 +2,22 @@
  (identifier (srfi 63))
  (title
   "SRFI-63 -- Homogeneous and Heterogeneous Arrays")
- (description ???)
+ (description "The SRFI, which is to supersede SRFI-47, \"Array\",
+
+-   synthesizes array concepts from Common-Lisp and Alan Bawden's
+    \"array.scm\";
+-   incorporates all the uniform vector types from SFRI-4 \"Homogeneous
+    numeric vector datatypes\";
+-   adds a boolean uniform array type;
+-   adds 16.bit and 128.bit floating-point uniform-array types;
+-   adds decimal floating-point uniform-array types; and
+-   adds array types of (dual) floating-point complex numbers.
+
+Multi-dimensional arrays subsume homogeneous vectors as the
+one-dimensional case, obviating the need for SRFI-4.
+
+SRFI-58 gives a read/write invariant syntax for the homogeneous and
+heterogeneous arrays described here.")
  (link "https://srfi.schemers.org/srfi-63/srfi-63.html")
  (definitions
   (a:bool

@@ -1,7 +1,11 @@
 (library
  (identifier (srfi 134))
  (title "SRFI-134 -- Immutable Deques")
- (description ???)
+ (description "This SRFI defines immutable deques. A deque is a double-ended queue, a
+sequence which allows elements to be added or removed efficiently from
+either end. A structure is immutable when all its operations leave the
+structure unchanged. Note that none of the procedures specified here
+ends with an exclamation point.")
  (link "https://srfi.schemers.org/srfi-134/srfi-134.html")
  (definitions
   (generator->ideque

@@ -2,7 +2,7 @@
  (identifier (srfi 95))
  (title
   "SRFI-95 -- Sorting and Merging")
- (description ???)
+ (description "Sorting and Merging are useful operations deserving a common API.")
  (link "https://srfi.schemers.org/srfi-95/srfi-95.html")
  (definitions
   (merge

@@ -1,7 +1,22 @@
 (library
  (identifier (srfi 60))
  (title "SRFI-60 -- Integers as Bits")
- (description ???)
+ (description "Treating integers as two's-complement strings of bits is an arcane but
+important domain of computer science. It is used for:
+
+-   hashing;
+-   Galois-field[2] calculations of error-detecting and error-correcting
+    codes;
+-   cryptography and ciphers;
+-   pseudo-random number generation;
+-   register-transfer-level modeling of digital logic designs;
+-   Fast-Fourier transforms;
+-   packing and unpacking numbers in persistant data structures;
+-   space-filling curves with applications to dimension reduction and
+    sparse multi-dimensional database indexes; and
+-   generating approximate seed values for root-finders and
+    transcendental function algorithms.
+")
  (link "https://srfi.schemers.org/srfi-60/srfi-60.html")
  (definitions
   (any-bits-set?

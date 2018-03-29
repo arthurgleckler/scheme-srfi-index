@@ -2,7 +2,16 @@
  (identifier (srfi 116))
  (title
   "SRFI-116 -- Immutable List Library")
- (description ???)
+ (description "Scheme currently does not provide immutable pairs corresponding to its
+existing mutable pairs, although most uses of pairs do not exploit their
+mutability. The Racket system takes the radical approach of making
+Scheme's pairs immutable, and providing a minimal library of mutable
+pairs with procedures named
+mpair?, mcons, mcar, mcdr,       set-mcar!, set-mcdr!. This SRFI takes
+the opposite approach of leaving Scheme's pairs unchanged and providing
+a full set of routines for creating and dealing with immutable pairs.
+The sample implementation is portable (to systems with SRFI 9) and
+efficient.")
  (link "https://srfi.schemers.org/srfi-116/srfi-116.html")
  (definitions
   (dotted-ilist?

@@ -2,7 +2,12 @@
  (identifier (srfi 94))
  (title
   "SRFI-94 -- Type-Restricted Numerical Functions")
- (description ???)
+ (description "In the coding of numerial calculations in latent-typed languages it is
+good practice to assure that those calculations are using the intended
+number system. The most common number systems for programmatic
+calculations are the integers, reals, and complexes. This SRFI
+introduces 14 real-only and 3 integer-only variants of R5RS procedures
+to facilitate numerical type checking and declaration.")
  (link "https://srfi.schemers.org/srfi-94/srfi-94.html")
  (definitions
   (abs

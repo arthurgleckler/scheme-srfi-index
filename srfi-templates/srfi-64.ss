@@ -2,7 +2,12 @@
  (identifier (srfi 64))
  (title
   "SRFI-64 -- A Scheme API for test suites")
- (description ???)
+ (description "This defines an API for writing test suites, to make it easy to portably
+test Scheme APIs, libraries, applications, and implementations. A test
+suite is a collection of test cases that execute in the context of a
+test-runner. This specifications also supports writing new test-runners,
+to allow customization of reporting and processing the result of running
+test suites.")
  (link "https://srfi.schemers.org/srfi-64/srfi-64.html")
  (definitions
   (test-apply

@@ -2,7 +2,15 @@
  (identifier (srfi 21))
  (title
   "SRFI-21 -- Real-time multithreading support")
- (description ???)
+ (description "This SRFI defines the following multithreading datatypes for Scheme
+
+-   Thread
+-   Mutex
+-   Condition variable
+-   Time
+
+It also defines a mechanism to handle exceptions and some multithreading
+exception datatypes.")
  (link "https://srfi.schemers.org/srfi-21/srfi-21.html")
  (definitions
   (abandoned-mutex-exception?

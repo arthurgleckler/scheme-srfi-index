@@ -2,7 +2,9 @@
  (identifier (srfi 115))
  (title
   "SRFI-115 -- Scheme Regular Expressions")
- (description ???)
+ (description "This SRFI provides a library for matching strings with regular
+expressions described using the SRE \"Scheme Regular Expression\" notation
+first introduced by SCSH, and extended heavily by IrRegex.")
  (link "https://srfi.schemers.org/srfi-115/srfi-115.html")
  (definitions
   (char-set->sre

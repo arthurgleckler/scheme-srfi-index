@@ -1,7 +1,18 @@
 (library
  (identifier (srfi 13))
  (title "SRFI-13 -- String Libraries")
- (description ???)
+ (description "R5RS Scheme has an impoverished set of string-processing utilities,
+which is a problem for authors of portable code. This SRFI proposes a
+coherent and comprehensive set of string-processing procedures; it is
+accompanied by a reference implementation of the spec. The reference
+implementation is
+
+-   portable
+-   efficient
+-   open source
+
+The routines in this SRFI are backwards-compatible with the
+string-processing routines of R5RS.")
  (link "https://srfi.schemers.org/srfi-13/srfi-13.html")
  (definitions
   (check-substring-spec

@@ -2,7 +2,30 @@
  (identifier (srfi 125))
  (title
   "SRFI-125 -- Intermediate hash tables")
- (description ???)
+ (description "This SRFI defines an interface to hash tables, which are widely
+recognized as a fundamental data structure for a wide variety of
+applications. A hash table is a data structure that:
+
+-   Is disjoint from all other types.
+-   Provides a mapping from objects known as _keys_ to corresponding
+    objects known as _values_.
+    -   Keys may be any Scheme objects in some kinds of hash tables, but
+        are restricted in other kinds.
+    -   Values may be any Scheme objects.
+-   Has no intrinsic order for the key-value _associations_ it contains.
+-   Provides an _equality predicate_ which defines when a proposed key
+    is the same as an existing key. No table may contain more than one
+    value for a given key.
+-   Provides a _hash function_ which maps a candidate key into a
+    non-negative exact integer.
+-   Supports mutation as the primary means of setting the contents of
+    a table.
+-   Provides key lookup and destructive update in (expected) amortized
+    constant time, provided a satisfactory hash function is available.
+-   Does not guarantee that whole-table operations work in the presence
+    of concurrent mutation of the whole hash table (values may be
+    safely mutated).
+")
  (link "https://srfi.schemers.org/srfi-125/srfi-125.html")
  (definitions
   (alist->hash-table

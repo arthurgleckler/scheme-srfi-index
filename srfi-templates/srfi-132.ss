@@ -1,7 +1,7 @@
 (library
  (identifier (srfi 132))
  (title "SRFI-132 -- Sort Libraries")
- (description ???)
+ (description "This SRFI describes the API for a full-featured sort toolkit.")
  (link "https://srfi.schemers.org/srfi-132/srfi-132.html")
  (definitions
   (list-delete-neighbor-dups

@@ -1,7 +1,10 @@
 (library
  (identifier (srfi 143))
  (title "SRFI-143 -- Fixnums")
- (description ???)
+ (description "This SRFI describes arithmetic procedures applicable to a limited range
+of exact integers only. These procedures are semantically similar to the
+corresponding generic-arithmetic procedures, but allow more efficient
+implementations.")
  (link "https://srfi.schemers.org/srfi-143/srfi-143.html")
  (definitions
   (fixnum?

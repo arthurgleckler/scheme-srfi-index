@@ -2,7 +2,12 @@
  (identifier (srfi 133))
  (title
   "SRFI-133 -- Vector Library (R7RS-compatible)")
- (description ???)
+ (description "This SRFI proposes a comprehensive library of vector operations
+accompanied by a freely available and complete reference implementation.
+The reference implementation is unencumbered by copyright, and useable
+with no modifications on any Scheme system that is R5RS-compliant. It
+also provides several hooks for implementation-specific optimization as
+well.")
  (link "https://srfi.schemers.org/srfi-133/srfi-133.html")
  (definitions
   (list->vector

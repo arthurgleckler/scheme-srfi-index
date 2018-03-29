@@ -2,7 +2,11 @@
  (identifier (srfi 74))
  (title
   "SRFI-74 -- Octet-Addressed Binary Blocks")
- (description ???)
+ (description "This SRFI defines a set of procedures for creating, accessing, and
+manipulating octet-addressed blocks of binary data, in short, _blobs_.
+The SRFI provides access primitives for fixed-length integers of
+arbitrary size, with specified endianness, and a choice of unsigned and
+two's complement representations.")
  (link "https://srfi.schemers.org/srfi-74/srfi-74.html")
  (definitions
   (blob->sint-list

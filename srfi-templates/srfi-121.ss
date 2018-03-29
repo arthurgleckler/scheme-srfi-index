@@ -1,7 +1,14 @@
 (library
  (identifier (srfi 121))
  (title "SRFI-121 -- Generators")
- (description ???)
+ (description "This SRFI defines utility procedures that create, transform, and consume
+generators. A generator is simply a procedure with no arguments that
+works as a source of a series of values. Every time it is called, it
+yields a value. Generators may be finite or infinite; a finite generator
+returns an end-of-file object to indicate that it is exhausted. For
+example, read-char, read-line, and read are generators that generate
+characters, lines, and objects from the current input port. Generators
+provide lightweight laziness.")
  (link "https://srfi.schemers.org/srfi-121/srfi-121.html")
  (definitions
   (bytevector->generator

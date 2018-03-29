@@ -1,7 +1,8 @@
 (library
  (identifier (srfi 96))
  (title "SRFI-96 -- SLIB Prerequisites")
- (description ???)
+ (description "This SRFI specifies a set of procedures and macros presenting a uniform
+interface sufficient to host the SLIB Scheme Library system.")
  (link "https://srfi.schemers.org/srfi-96/srfi-96.html")
  (definitions
   (call-with-open-ports

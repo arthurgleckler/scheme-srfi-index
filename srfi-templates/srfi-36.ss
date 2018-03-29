@@ -1,7 +1,11 @@
 (library
  (identifier (srfi 36))
  (title "SRFI-36 -- I/O Conditions")
- (description ???)
+ (description "This SRFI specifies a set of condition types for I/O errors. The
+condition types are defined in terms of SRFI 35. Moreover, this SRFI
+requires a Scheme system implementing it to raise exceptions in the
+sense of SRFI 34 for errors occurring during the execution of the R5RS
+I/O operations.")
  (link "https://srfi.schemers.org/srfi-36/srfi-36.html")
  (definitions
   (&i/o-closed-error

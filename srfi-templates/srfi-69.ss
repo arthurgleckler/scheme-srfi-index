@@ -1,7 +1,27 @@
 (library
  (identifier (srfi 69))
  (title "SRFI-69 -- Basic hash tables")
- (description ???)
+ (description "This SRFI defines basic hash tables. Hash tables are widely recognised
+as a fundamental data structure for a wide variety of applications. A
+hash table is a data structure that:
+
+1.  provides a mapping from some set of keys to some set of values
+    associated to those keys
+2.  has no intrinsic order for the (key, value) associations it contains
+3.  supports in-place modification as the primary means of setting the
+    contents of a hash table
+4.  provides key lookup and destructive update in amortised constant
+    time, provided that a good hash function is used.
+
+This SRFI aims to accomplish these goals:
+
+1.  to provide a consistent, generic and widely applicable API for hash
+    tables
+2.  to improve code portability by providing a standard hash table
+    facility with guaranteed behaviour
+3.  to help the programmer by defining utility routines that account for
+    the most common situations of using hash tables.
+")
  (link "https://srfi.schemers.org/srfi-69/srfi-69.html")
  (definitions
   (Concept:HashTable

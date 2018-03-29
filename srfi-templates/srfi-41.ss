@@ -1,7 +1,25 @@
 (library
  (identifier (srfi 41))
  (title "SRFI-41 -- Streams")
- (description ???)
+ (description "Streams, sometimes called lazy lists, are a sequential data structure
+containing elements computed only on demand. A stream is either null or
+is a pair with a stream in its cdr. Since elements of a stream are
+computed only when accessed, streams can be infinite. Once computed, the
+value of a stream element is cached in case it is needed again.
+
+Streams without memoization were first described by Peter Landin in
+1965. Memoization became accepted as an essential feature of streams
+about a decade later. Today, streams are the signature data type of
+functional programming languages such as Haskell.
+
+This Scheme Request for Implementation describes two libraries for
+operating on streams: a canonical set of stream primitives and a set of
+procedures and syntax derived from those primitives that permits
+convenient expression of stream operations. They rely on facilities
+provided by R6RS, including libraries, records, and error reporting. To
+load both stream libraries, say:
+
+(import (streams))")
  (link "https://srfi.schemers.org/srfi-41/srfi-41.html")
  (definitions
   (define-stream

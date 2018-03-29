@@ -1,7 +1,8 @@
 (library
  (identifier (srfi 141))
  (title "SRFI-141 -- Integer division")
- (description ???)
+ (description "This SRFI provides a fairly complete set of integral division and
+remainder operators.")
  (link "https://srfi.schemers.org/srfi-141/srfi-141.html")
  (definitions
   (balanced-quotient

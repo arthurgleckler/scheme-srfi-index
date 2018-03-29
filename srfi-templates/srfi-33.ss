@@ -2,7 +2,20 @@
  (identifier (srfi 33))
  (title
   "SRFI-33 -- Integer Bitwise-operation Library")
- (description ???)
+ (description "R5RS Scheme has no utilities for performing bitwise logical operations
+on integers or bitstrings, which is a problem for authors of portable
+code. This SRFI proposes a coherent and comprehensive set of these
+functions; it is accompanied by a reference implementation of the spec
+in terms of a set of seven core operators. The reference implementation
+is
+
+-   portable
+-   efficient
+-   completely open, public-domain source
+
+The precise semantics of these operators is almost never an issue. A
+consistent, portable set of *names* and *parameter conventions*,
+however, is. Hence this SRFI.")
  (link "https://srfi.schemers.org/srfi-33/srfi-33.html")
  (definitions
   (all-bits-set?

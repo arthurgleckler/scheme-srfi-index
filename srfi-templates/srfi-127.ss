@@ -1,7 +1,16 @@
 (library
  (identifier (srfi 127))
  (title "SRFI-127 -- Lazy Sequences")
- (description ???)
+ (description "Lazy sequences (or lseqs, pronounced \"ell-seeks\") are a generalization
+of lists. In particular, an lseq is either a proper list or a dotted
+list whose last cdr is a SRFI 121 generator. A generator is a procedure
+that can be invoked with no arguments in order to lazily supply
+additional elements of the lseq. When a generator has no more elements
+to return, it returns an end-of-file object. Consequently, lazy
+sequences cannot reliably contain end-of-file objects.
+
+This SRFI provides a set of procedures suitable for operating on lazy
+sequences based on SRFI 1.")
  (link "https://srfi.schemers.org/srfi-127/srfi-127.html")
  (definitions
   (generator->lseq

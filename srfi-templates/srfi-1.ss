@@ -1,7 +1,16 @@
 (library
  (identifier (srfi 1))
  (title "SRFI-1 -- List Library")
- (description ???)
+ (description "R5RS Scheme has an impoverished set of list-processing utilities, which
+is a problem for authors of portable code. This SRFI proposes a coherent
+and comprehensive set of list-processing procedures; it is accompanied
+by a reference implementation of the spec. The reference implementation
+is
+
+-   portable
+-   efficient
+-   completely open, public-domain source
+")
  (link "https://srfi.schemers.org/srfi-1/srfi-1.html")
  (definitions
   (alist-cons

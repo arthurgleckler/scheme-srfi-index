@@ -1,7 +1,10 @@
 (library
  (identifier (srfi 113))
  (title "SRFI-113 -- Sets and bags")
- (description ???)
+ (description "_Sets_ and _bags_ (also known as multisets) are unordered collections
+that can contain any Scheme object. Sets enforce the constraint that no
+two elements can be the same in the sense of the set's associated
+_equality predicate_; bags do not.")
  (link "https://srfi.schemers.org/srfi-113/srfi-113.html")
  (definitions
   (alist->bag

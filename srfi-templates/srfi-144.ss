@@ -1,7 +1,11 @@
 (library
  (identifier (srfi 144))
  (title "SRFI-144 -- Flonums")
- (description ???)
+ (description "This SRFI describes numeric procedures applicable to _flonums_, a subset
+of the inexact real numbers provided by a Scheme implementation. In most
+Schemes, the flonums and the inexact reals are the same. These
+procedures are semantically equivalent to the corresponding generic
+procedures, but allow more efficient implementations.")
  (link "https://srfi.schemers.org/srfi-144/srfi-144.html")
  (definitions
   (fl*

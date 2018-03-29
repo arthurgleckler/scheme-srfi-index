@@ -1,7 +1,14 @@
 (library
  (identifier (srfi 44))
  (title "SRFI-44 -- Collections")
- (description ???)
+ (description "A Collections API which defines a common naming scheme and set of
+operations for creating, accessing, and manipulating common
+datastructures in Scheme. The API defines accessors, a common protocol
+for value access via generic and specific enumeration, and functions for
+inter-datastructure cooperation. Finally, a concrete specification of a
+compliant set of operators for the standard Scheme heterogenous
+datastructures (lists and vectors) and for the homogeneous Scheme string
+is provided.")
  (link "https://srfi.schemers.org/srfi-44/srfi-44.html")
  (definitions
   (alist-map

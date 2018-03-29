@@ -1,7 +1,9 @@
 (library
  (identifier (srfi 111))
  (title "SRFI-111 -- Boxes")
- (description ???)
+ (description "Boxes are objects with a single mutable state. Several Schemes have
+them, sometimes called _cells_. A constructor, predicate, accessor, and
+mutator are provided.")
  (link "https://srfi.schemers.org/srfi-111/srfi-111.html")
  (definitions
   (box

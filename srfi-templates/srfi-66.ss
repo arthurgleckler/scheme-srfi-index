@@ -1,7 +1,8 @@
 (library
  (identifier (srfi 66))
  (title "SRFI-66 -- Octet Vectors")
- (description ???)
+ (description "This SRFI defines a set of procedures for creating, accessing, and
+manipulating uniform vectors of octets.")
  (link "https://srfi.schemers.org/srfi-66/srfi-66.html")
  (definitions
   (list->u8vector

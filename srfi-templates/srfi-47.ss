@@ -1,7 +1,9 @@
 (library
  (identifier (srfi 47))
  (title "SRFI-47 -- Array")
- (description ???)
+ (description "\"slib/array.scm\" synthesizes array ideas from Common-Lisp and Alan
+Bawden with homogeneous vector ideas from SRFI-4 and SCM. The result
+portably integrates homogeneous and heterogeneous arrays into Scheme.")
  (link "https://srfi.schemers.org/srfi-47/srfi-47.html")
  (definitions
   (SRFI-25

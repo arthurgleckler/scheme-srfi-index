@@ -1,7 +1,13 @@
 (library
  (identifier (srfi 117))
  (title "SRFI-117 -- Mutable Queues")
- (description ???)
+ (description "List queues are mutable ordered collections that can contain any Scheme
+object. Each list queue is based on an ordinary Scheme list containing
+the elements of the list queue by maintaining pointers to the first and
+last pairs of the list. It's cheap to add or remove elements from the
+front of the list or to add elements to the back, but not to remove
+elements from the back. List queues are disjoint from other types of
+Scheme objects.")
  (link "https://srfi.schemers.org/srfi-117/srfi-117.html")
  (definitions
   (list-queue

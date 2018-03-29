@@ -2,7 +2,26 @@
  (identifier (srfi 14))
  (title
   "SRFI-14 -- Character-set Library")
- (description ???)
+ (description "The ability to efficiently represent and manipulate sets of characters
+is an unglamorous but very useful capability for text-processing code --
+one that tends to pop up in the definitions of other libraries. Hence it
+is useful to specify a general substrate for this functionality early.
+This SRFI defines a general library that provides this functionality.
+
+It is accompanied by a reference implementation for the spec. The
+reference implementation is fairly efficient, straightforwardly
+portable, and has a \"free software\" copyright. The implementation is
+tuned for \"small\" 7 or 8 bit character types, such as ASCII or Latin-1;
+the data structures and algorithms would have to be altered for larger
+16 or 32 bit character types such as Unicode -- however, the specs have
+been carefully designed with these larger character types in mind.
+
+Several forthcoming SRFIs can be defined in terms of this one:
+
+-   string library
+-   delimited input procedures (_e.g._, read-line)
+-   regular expressions
+")
  (link "https://srfi.schemers.org/srfi-14/srfi-14.html")
  (definitions
   (->char-set

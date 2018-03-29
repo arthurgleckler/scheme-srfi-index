@@ -2,7 +2,10 @@
  (identifier (srfi 159))
  (title
   "SRFI-159 -- Combinator Formatting")
- (description ???)
+ (description "A library of procedures for formatting Scheme objects to text in various
+ways, and for easily concatenating, composing and extending these
+formatters efficiently without resorting to capturing and manipulating
+intermediate strings.")
  (link "https://srfi.schemers.org/srfi-159/srfi-159.html")
  (definitions
   (as-black
