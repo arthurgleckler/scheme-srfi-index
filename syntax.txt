@@ -4,6 +4,9 @@
 	(identifier <identifier>)
 	; * the `<identifier>` should be an s-expression, perhaps similar to what one expects to put in R7RS `import`;
 	
+	(title <title>)
+	; * the `<title>` must be a single string value;
+	
 	(description <string> ...)
 	; * one or more strings that will be concatenated to obtain the final description;
 	; * each string is considered a different "paragraph";

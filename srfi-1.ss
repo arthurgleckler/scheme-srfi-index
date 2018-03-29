@@ -2,7 +2,8 @@
 
 (library
 	
-	(id (srfi 1))
+	(identifier (srfi 1))
+	(title "SRFI 1: List Library")
 	(link "https://srfi.schemers.org/srfi-1/srfi-1.html")
 	
 	
