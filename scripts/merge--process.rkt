@@ -75,7 +75,7 @@
 						`(,(car _symbol)
 							(type ???)
 							(category ???)
-							(contract ???)
+							(signature ???)
 							(description ???)
 							(link ???)
 							(sources! ,@(cadr _symbol))

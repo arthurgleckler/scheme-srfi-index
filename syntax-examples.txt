@@ -15,50 +15,50 @@
 			;; NOTE:  There is some repetition between `type` and `category`, but it just happens that in SRFI-1 there is also a category named `Constructors`.
 			(type constructor)
 			(category constructors)
-			(contract ((a d) -> pair)))
+			(signature ((a d) -> pair)))
 		
 		(list
 			(type constructor)
 			(category constructors)
-			(contract ((object ...) -> list)))
+			(signature ((object ...) -> list)))
 		
 		(xcons
 			(type constructor)
 			(category constructors)
-			(contract ((d a) -> pair)))
+			(signature ((d a) -> pair)))
 		
 		(cons*
 			(alias list*) ;  NOTE:  This is not in SRFI-1 but it is hinted and could serve as an example of this feature.
 			(type constructor)
 			(category constructors)
-			(contract ((object ...) -> dotted-list)))
+			(signature ((object ...) -> dotted-list)))
 		
 		(make-list
 			(type constructor)
 			(category constructors)
-			(contract
+			(signature
 				((n) -> list)
 				((n (fill object)) -> list)))
 		
 		(list-tabulate
 			(type constructor)
 			(category constructors)
-			(contract ((n proc) -> list)))
+			(signature ((n proc) -> list)))
 		
 		(list-copy
 			(type constructor)
 			(category constructors)
-			(contract ((finite-list) -> finite-list)))
+			(signature ((finite-list) -> finite-list)))
 		
 		(circular-list
 			(type constructor)
 			(category constructors)
-			(contract ((object ...) -> circular-list)))
+			(signature ((object ...) -> circular-list)))
 		
 		(iota
 			(type constructor)
 			(category constructors)
-			(contract
+			(signature
 				((count) -> list)
 				((count start) -> list)
 				((count start stop) -> list)))
@@ -68,14 +68,14 @@
 		(map
 			(type procedure)
 			(category map-fold)
-			(contract ...)
+			(signature ...)
 			(extends (* (scheme 5)))
 			(compatible (* (scheme 7))))
 		
 		(map!
 			(type procedure!)
 			(category map-fold linear-update side-effects)
-			(contract ...))
+			(signature ...))
 		
 		; ...
 		

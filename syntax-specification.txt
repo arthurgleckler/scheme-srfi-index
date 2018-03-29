@@ -37,7 +37,7 @@
 			; * `<category>` is a symbol specified in the `categories` section;
 			; * it is optional;
 			
-			(contract
+			(signature
 				; * perhaps we could model this section after Racket's contracts;
 				; * it is optional;
 				((<input> ...) -> <output>))

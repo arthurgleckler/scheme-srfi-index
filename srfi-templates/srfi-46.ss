@@ -7,7 +7,7 @@
  (definitions
   (syntax-rules (type ???)
     (category ???)
-    (contract ???)
+    (signature ???)
     (description ???)
     (link ???)
     (sources! chibi)))
